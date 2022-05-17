@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+     * {
+      box-sizing: border-box;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      background-color: hsl(217, 54%, 11%);
+      color: white;
+      font-family: 'Outfit';
+    }
+    .card {
+      background-color: hsl(216, 50%, 16%);
+      width: 350px;
+      margin: 0 auto;
+      border-radius: 15px;
+      padding: 15px;
+    }
+    .mainimage {
+      width: 100%;
+      border-radius: 20px;
+
+    }
+    .avatar{
+      width:40px;
+      height:40px;
+      border-radius: 50%;
+      border:1px solid white;
+    }
+    .artistprofile {
+      display:flex;
+      align-items: center;
+      border-top: 1px solid grey;
+      padding-top: 15px;
+      margin-top: 20px;
+    }
+    .artistprofile span {
+      margin-left: 10px;
+    }
+    .eth-class span{
+      line-height: 3.6;
+    }
+    .opacity {
+      opacity: 50%;
+    }
+    .ethcard{
+      padding-left:8px;
+    }
+    .imageicon {
+      position: relative;
+      bottom: -3px;
+    }
+    .left{
+      color: hsl(178, 100%, 50%);
+      font-weight:600;
+    }
+    .right{
+      position:relative;
+      left: 113px
+    }
+
+    footer {
+      margin-top: 20px;
+    }
+
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left:50%;
+}
+.container{
+  position: relative;
+  width: 100%;
+
+  }
+.image{
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .3s;
+  background-color:hsl(178, 100%, 50%);
+  position: absolute;
+  width: 100%;
+  border-radius: 20px;
+
+}
+
+.container:hover .overlay {
+  opacity: 0.5;
+}
+.icon {
+  position: absolute;
+  top: 40%;
+  left:43%;
+  }
+
+  .creator-name:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+  }
+  h2:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+ <div>
+
+   <div class="container">
+    <img src="images/image-equilibrium.jpg"  class="mainimage">
+     <div class="overlay">
+       <a href="#" class="icon" title="view icon">
+         <img src="images/icon-view.svg">
+       </a>
+    </div>
+  </div>
+
+    <h2>
+       Equilibrium #3429
+    </h2>
+  <p class="opacity">Our Equilibrium collection promotes balance and calm.
+</p>
+   <div class="eth-class">
+  <img class="imageicon" src="images/icon-ethereum.svg" alt="ethereum-icon"><span class="ethcard left">0.041 ETH</span>
+  <img class="imageicon right" src="images/icon-clock.svg" alt="clock-icon"><span class="opacity ethcard right">3 days left</span>
+  </div>
+  <div class="artistprofile">
+  <img class="avatar" src="images/image-avatar.png">
+   <p> <span class="opacity">Creation of</span><span class="creator-name"> Jules Wyvern</span></p>
+  </div>
+ </div>
+</div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+</body>
+</html>
